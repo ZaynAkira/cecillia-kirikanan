@@ -198,4 +198,4 @@ class Interaction(commands.Cog):
             await ctx.reply("Sorry, but you can't do this to yourself")
 
 def setup(client):
-    client.add_cog(RequestOfKirkan(client))
+    client.add_cog(Interaction(client))
