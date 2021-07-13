@@ -64,7 +64,7 @@ class About(commands.Cog):
 
         embed.add_field(
             name="⠀",
-            value="[Invite Cecillia!](https://discord.com/api/oauth2/authorize?client_id=864043720297938946&permissions=2044591350&scope=bot) | [Check out our GitHub](https://github.com/ZaynAkira/cecillia-kirikanan) | [Join Chrono Curses!](https://discord.gg/VhKVdmNsGq)",
+            value="[Invite Cecillia!](https://discord.com/api/oauth2/authorize?client_id=864043720297938946&permissions=2044591350&scope=bot) | [Join Chrono Curses!](https://discord.gg/VhKVdmNsGq)",
             inline=False
         )
 
