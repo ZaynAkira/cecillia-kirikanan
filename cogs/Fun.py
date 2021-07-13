@@ -47,7 +47,7 @@ class Utilities(commands.Cog):
         
         
     @commands.command(name="wangytexten", description="Create a WANGY WANGY text", aliases=["wangyen"])
-    async def wangytext(self, ctx:Context, obyek:str=None):
+    async def wangytexten(self, ctx:Context, obyek:str=None):
         if not obyek:
             return await ctx.send("Please write who you want to add on text.")
         
@@ -83,6 +83,7 @@ class Utilities(commands.Cog):
             color = ctx.guild.me.color
         )
         embed.add_field(name="Daily Mood today is:", value=f"[click here](https://discord.gg/VhKVdmNsGq)")
+        await ctx.send(embed=embed)
 
 def setup(client):
     client.add_cog(Utilities(client))
