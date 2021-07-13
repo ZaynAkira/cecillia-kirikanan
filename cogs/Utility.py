@@ -87,10 +87,6 @@ class Utilities(commands.Cog):
         await ctx.send(embed=embed)
         
     #lovecalc
-    @commands.Cog.listener()
-    async def on_ready(self):
-        print("lovecalc.py siap")
-
     @commands.command(aliases=["lc", "kalkcinta"])
     @commands.cooldown(1, 5, commands.BucketType.user)
     async def lovecalc(self, ctx, nama1, nama2=None):
@@ -102,10 +98,41 @@ class Utilities(commands.Cog):
         persen = random.randint(0, 100)
         embed = discord.Embed(
             title = "Kalkulator Cinta",
-            description = f"{nama1} :heart: {nama2}\nLove between you both are: **{persen}%!** :v",
+            description = f"{nama1} :heart: {nama2}\nLove between you both are: **{persen}%!**",
             color = discord.Color.red()
         )
         await ctx.send(embed=embed)
+        
+    #rate
+    @commands.command(aliases=["nilai"])
+    @commands.cooldown(1, 5, commands.BucketType.user)
+    async def rate(self, ctx, *, obj=None):
+      if not obj:
+        await ctx.reply(f"**Invalid Syntax!** Please write who or what I should rate of!\nExample: `c.rate @Kirikanan#4821`")
+      else:
+        tabera = random.randint(0, 10)
+        await ctx.reply(f"Hmmm..., I'd rate {obj} a **{tabera}/10.**")
+    
+    #polls
+    @commands.command()
+    @commands.cooldown(1, 5, commands.BucketType.user)
+    async def poll(self, ctx, *, konten):
+        if not konten:
+            await ctx.reply(f"**Invalid Syntax!** Please write who or what I should poll of!\nExample: `c.poll Pizza time tonight?`")
+        else:
+            await ctx.message.delete()
+
+            embed = discord.Embed(
+                description = konten,
+                color = ctx.guild.get_member(self.client.user.id).color
+            )
+            embed.set_author(name=f"{ctx.author.display_name} asking your poll!", icon_url=ctx.author.avatar_url)
+            kirim = await ctx.send(embed=embed)
+
+            emot = ["✅", "❌"]
+            for emoji in emot:
+                await kirim.add_reaction(emoji)
+        
 
 def setup(client):
     client.add_cog(Utilities(client))
