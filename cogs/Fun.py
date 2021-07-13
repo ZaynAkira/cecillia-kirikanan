@@ -64,6 +64,17 @@ class Fun(commands.Cog):
         await ctx.message.delete()
         await ctx.send(kalimat)
     
+    #random number generator
+    @commands.command(name="random-number-generator", description="Mengacak Angka", aliases=["rng"])
+    async def r_n_g_(self, ctx:Context, mulai:int=None, akhir:int=None):
+        if not mulai:
+            await ctx.send("Insert start and end number.")
+        elif akhir == None:
+            await ctx.send("Please insert end number.")
+        else:
+            async with ctx.typing():
+                time.sleep(2)
+                await ctx.reply(random.randint(mulai, akhir))
     #Secret
     @commands.command(aliases=['secret', 'what', 'rickroll'])
     async def about(self, ctx:Context):
@@ -71,11 +82,7 @@ class Fun(commands.Cog):
             title = "Here's your daily mood",
             color = ctx.guild.me.color
         )
-        embed.add_field(
-            name="⠀",
-            value="[Click Here](https://youtu.be/dQw4w9WgXcQ)
-            inline=False
-        )
+        embed.add_field(name="Daily Mood today is:", value=f"[click here](https://discord.gg/VhKVdmNsGq)")
 
 def setup(client):
     client.add_cog(Fun(client))
