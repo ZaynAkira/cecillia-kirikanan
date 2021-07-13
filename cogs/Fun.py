@@ -78,4 +78,4 @@ class Fun(commands.Cog):
         )
 
 def setup(client):
-    client.add_cog(RequestOfKirkan(client))
+    client.add_cog(Fun(client))
