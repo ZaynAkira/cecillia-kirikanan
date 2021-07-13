@@ -9,10 +9,13 @@ class Utilities(commands.Cog):
     #autoreply
     @commands.Cog.listener()
     async def on_message(self, message:discord.Message):
-        if "dok" in message.content.lower():
+        if message.content.lower() in ["dok"]:
             await message.channel.send("kopit")
+            
+        elif [" dok", "dok "] in message.content.lower():
+            await message.channel.send("iyh")
 
-        elif "mangsut" in message.content.lower():
+        elif message.content.lower() in ["mangsut"]:
             await message.channel.send("iyh")
 
         elif "halo" in message.content.lower():
@@ -30,7 +33,7 @@ class Utilities(commands.Cog):
             await message.channel.send("komsalam")
 
         elif "sange" in message.content.lower():
-            await message.channel.send("hayoo ngapain nyentuh2 kemaluan?")
+            await message.channel.send("hayoo, ngapain kamu nyentuh-nyentuh kemaluan?")
 
     #wangy generator
     @commands.command(name="wangytext", description="Membuat teks WANGY WANGY", aliases=["wangy"])
@@ -82,7 +85,7 @@ class Utilities(commands.Cog):
             title = "Here's your daily mood",
             color = ctx.guild.me.color
         )
-        embed.add_field(name="Daily Mood today is:", value=f"[click here](https://discord.gg/VhKVdmNsGq)")
+        embed.add_field(name="Daily Mood today is:", value=f"[click here](https://youtu.be/dQw4w9WgXcQ)")
         await ctx.send(embed=embed)
 
 def setup(client):
