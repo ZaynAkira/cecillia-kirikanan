@@ -8,7 +8,6 @@ class Utilities(commands.Cog):
 
     #autoreply
     @commands.Cog.listener()
-   @commands.Cog.listener()
     async def on_message(self, message:discord.Message):
         if message.content.lower() in ["mangsut", "<:mangsut:772859666299617280>"]:
             await message.channel.send("iyh")
