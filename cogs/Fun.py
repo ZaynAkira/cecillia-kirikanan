@@ -87,6 +87,27 @@ class Utilities(commands.Cog):
         )
         embed.add_field(name="Daily Mood today is:", value=f"[click here](https://youtu.be/a6pbjksYUHY)")
         await ctx.send(embed=embed)
+        
+    #lovecalc
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print("lovecalc.py siap")
+
+    @commands.command(aliases=["lc", "kalkcinta"])
+    @commands.cooldown(1, 5, commands.BucketType.user)
+    async def lovecalc(self, ctx, nama1, nama2=None):
+        if not nama1:
+            await ctx.reply("**Invalid Syntax!** Please write who do you want to calculate their love!\nContoh: `c.lovecalc **[nama1]** **[nama2]**`")
+        elif nama2 == None:
+            await ctx.reply("**Invalid Syntax!** Please write who do you want to calculate their love!\nContoh: `c.lovecalc [nama1] **[nama2]**`")
+
+        persen = random.randint(0, 100)
+        embed = discord.Embed(
+            title = "Kalkulator Cinta",
+            description = f"{nama1} :heart: {nama2}\nLove between you both are: **{persen}%!** :v",
+            color = discord.Color.red()
+        )
+        await ctx.send(embed=embed)
 
 def setup(client):
     client.add_cog(Utilities(client))
