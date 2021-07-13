@@ -19,4 +19,4 @@ async def on_ready():
     channel = client.get_channel(858697952436158464)
     await channel.send(f"**{client.user}** telah diaktifkan kembali setelah diperbaiki. Sistem sudah berjalan normal kembali~! yaay! <:1_CelLovely:797873134375796776>")
    
-client.run(os.environ["ODY0MDQzNzIwMjk3OTM4OTQ2.YOvtbA.gEYRroII0NujJ8dW0cNVXSBe3Vc"])
+client.run("ODY0MDQzNzIwMjk3OTM4OTQ2.YOvtbA.Aj9A1NGbr33GVvPqWPiUe2Qkioo")
