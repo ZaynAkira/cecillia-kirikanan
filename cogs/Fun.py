@@ -7,16 +7,14 @@ class Utilities(commands.Cog):
         self.client = client
 
     #autoreply
+   #autoreply
     @commands.Cog.listener()
     async def on_message(self, message:discord.Message):
-        if message.content.lower() in ["mangsut", "<:mangsut:772859666299617280>"]:
+        if "dok" in message.content.lower():
+            await message.channel.send("kopit")
+
+        elif "mangsut" in message.content.lower():
             await message.channel.send("iyh")
-            
-        elif message.content.lower() in ["dok"]:
-            await message.channel.send("kopit")
-            
-        elif [" dok", "dok "] in message.content.lower():
-            await message.channel.send("kopit")
 
         elif "halo" in message.content.lower():
             if message.author != self.client.user:
