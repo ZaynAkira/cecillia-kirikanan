@@ -2,7 +2,7 @@ import discord, requests, random, time
 from discord.ext import commands
 from discord.ext.commands.context import Context
 
-class Fun(commands.Cog):
+class Utilities(commands.Cog):
     def __init__(self, client):
         self.client = client
 
@@ -85,4 +85,4 @@ class Fun(commands.Cog):
         embed.add_field(name="Daily Mood today is:", value=f"[click here](https://discord.gg/VhKVdmNsGq)")
 
 def setup(client):
-    client.add_cog(Fun(client))
+    client.add_cog(Utilities(client))
