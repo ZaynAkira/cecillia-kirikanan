@@ -85,7 +85,7 @@ class Utilities(commands.Cog):
             title = "Here's your daily mood",
             color = ctx.guild.me.color
         )
-        embed.add_field(name="Daily Mood today is:", value=f"[click here](https://youtu.be/dQw4w9WgXcQ)")
+        embed.add_field(name="Daily Mood today is:", value=f"[click here](https://youtu.be/a6pbjksYUHY)")
         await ctx.send(embed=embed)
 
 def setup(client):
