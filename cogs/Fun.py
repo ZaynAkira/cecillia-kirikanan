@@ -76,7 +76,7 @@ class Utilities(commands.Cog):
                 time.sleep(2)
                 await ctx.reply(random.randint(mulai, akhir))
     #Secret
-    @commands.command(aliases=['secret', 'what', 'rickroll'])
+    @commands.command()
     async def secret(self, ctx:Context):
         embed = discord.Embed(
             title = "Here's your daily mood",
