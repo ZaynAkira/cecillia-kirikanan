@@ -20,7 +20,7 @@ class About(commands.Cog):
         embed.set_author(name=self.client.user, icon_url=self.client.user.avatar_url)
         embed.set_thumbnail(url=self.client.user.avatar_url_as(format="png", size=4096))
 
-        embed.add_field(name="Name", value=f"[{self.client.user.name}](https://discord.gg/VhKVdmNsGq)")
+        embed.add_field(name="Name", value=f"[{self.client.user.name}](https://youtu.be/dQw4w9WgXcQ)")
         #
         member = discord.utils.find(lambda m: m.name == 'Kirikanan', ctx.guild.members)
         if member.status == discord.Status.online:
