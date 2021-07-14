@@ -11,9 +11,6 @@ class Utilities(commands.Cog):
     async def on_message(self, message:discord.Message):
         if "dok" in ' ' + message.content.lower() + ' ':
             await message.channel.send("kopit")
-            
-        elif "dok" :
-            await message.channel.send("kopit")
 
         elif "mangsut" in message.content.lower():
             await message.channel.send("iyh")
