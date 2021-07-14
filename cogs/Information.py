@@ -160,7 +160,7 @@ class Information(commands.Cog):
         await ctx.send(embed=embed)
        
     #emoji enlarger
-    @commands.command(aliases=["e", "enlarge", "en"])
+    @commands.command(aliases=["e", "en"])
     async def enlarge(self, ctx, emoji:discord.PartialEmoji=None):
         if not emoji:
             return await ctx.reply("**Invalid Syntax!** Please write what emote you want to enlarge!!\nExample: `c.e :1_CelLovely:`")
