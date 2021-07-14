@@ -9,17 +9,17 @@ class Utilities(commands.Cog):
    #autoreply
     @commands.Cog.listener()
     async def on_message(self, message:discord.Message):
-        if ("dok" in ' ' + message.content.lower() + ' '):
+        if "dok" in (" " + message.content.lower() + " "):
             await message.channel.send("kopit")
 
         elif "mangsut" in message.content.lower():
             await message.channel.send("iyh")
 
-        elif "halo" in ' ' + message.content.lower() + ' ':
+        elif "halo" in (" " + message.content.lower() + " "):
             if message.author != self.client.user:
                 await message.channel.send("hai")
 
-        elif "hai" in ' ' + message.content.lower() + ' ':
+        elif "hai" in (" " + message.content.lower() + " "):
             if message.author != self.client.user:
                 await message.channel.send("halo")
 
@@ -29,7 +29,7 @@ class Utilities(commands.Cog):
         elif "samlekom" in message.content.lower():
             await message.channel.send("komsalam")
 
-        elif "sange" in message.content.lower():
+        elif "sange" in (" " + message.content.lower() + " "):
             await message.channel.send("hayoo, ngapain kamu nyentuh-nyentuh kemaluan?")
 
     #wangy generator
