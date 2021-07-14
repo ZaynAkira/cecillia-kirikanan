@@ -9,7 +9,7 @@ class Utilities(commands.Cog):
    #autoreply
     @commands.Cog.listener()
     async def on_message(self, message:discord.Message):
-        if "dok" in ' ' + message.content.lower() + ' ':
+        if ("dok" in ' ' + message.content.lower() + ' '):
             await message.channel.send("kopit")
 
         elif "mangsut" in message.content.lower():
