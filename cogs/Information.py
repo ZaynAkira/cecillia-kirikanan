@@ -210,7 +210,7 @@ class Information(commands.Cog):
             await ctx.reply("Unfortunately, bot can't enlarge basic emote")
             
     #Spotify
-     @commands.command()
+    @commands.command()
     async def spotify(self, ctx, orang:discord.Member=None):
         orang = ctx.author if not orang else orang
 
