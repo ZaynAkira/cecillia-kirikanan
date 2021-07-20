@@ -14,15 +14,7 @@ class Utilities(commands.Cog):
 
         elif "mangsut" in message.content.lower():
             await message.channel.send("iyh")
-
-        elif "halo" in (" " + message.content.lower() + " "):
-            if message.author != self.client.user:
-                await message.channel.send("hai")
-
-        elif "hai" in (" " + message.content.lower() + " "):
-            if message.author != self.client.user:
-                await message.channel.send("halo")
-
+            
         elif "assalaamualaikum" in message.content.lower():
             await message.channel.send("Waalaikumussalaam")
 
