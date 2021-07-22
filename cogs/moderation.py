@@ -113,7 +113,7 @@ class Moderasi(commands.Cog):
         elif isinstance(error, commands.BotMissingPermissions):
             await ctx.reply("Saya tidak memiliki izin `Manage Roles`!")
 
-    @commands.command(name="purge", aliases=["clear"], description="Menghapus pesan.")
+    @commands.command(name="purge", aliases=["del"], description="Menghapus pesan.")
     async def purge(self, ctx:Context, jumlah:int=None):
         if not jumlah:
             return await ctx.send("Masukkan jumlah pesan yang ingin kamu hapus.\nContoh: `c.purge 3`")
