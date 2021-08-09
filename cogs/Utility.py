@@ -23,9 +23,7 @@ class Utilities(commands.Cog):
 
         elif "sange" in (" " + message.content.lower() + " "):
             await message.channel.send("hayoo, ngapain kamu nyentuh-nyentuh kemaluan?")
-            
-        elif "ingfo" in (" " + message.content.lower() + " "):
-            await message.channel.send("no ingfo")
+    
 
     #wangy generator
     @commands.command(name="wangytext", description="Membuat teks WANGY WANGY", aliases=["wangy"])
