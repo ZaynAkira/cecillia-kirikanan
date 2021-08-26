@@ -86,9 +86,9 @@ class Utilities(commands.Cog):
     @commands.cooldown(1, 5, commands.BucketType.user)
     async def lovecalc(self, ctx, nama1, nama2=None):
         if not nama1:
-            await ctx.reply("**Invalid Syntax!** Please write who do you want to calculate their love!\nContoh: `c.lovecalc **[nama1]** **[nama2]**`")
+            await ctx.reply("**Invalid Syntax!** Please write who do you want to calculate their love!\nExample: `c.lovecalc **[nama1]** **[nama2]**`")
         elif nama2 == None:
-            await ctx.reply("**Invalid Syntax!** Please write who do you want to calculate their love!\nContoh: `c.lovecalc [nama1] **[nama2]**`")
+            await ctx.reply("**Invalid Syntax!** Please write who do you want to calculate their love!\nExample: `c.lovecalc [nama1] **[nama2]**`")
 
         persen = random.randint(0, 100)
         embed = discord.Embed(
