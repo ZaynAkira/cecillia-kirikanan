@@ -293,7 +293,7 @@ class Information(commands.Cog):
             title = f"Informasi Role",
             color = role.color
         )
-        embed.add_field(name="Nama", value=f"{role.mention} (`{role.name}`)")
+        embed.add_field(name="Name", value=f"{role.mention} (`{role.name}`)")
         embed.add_field(name="ID", value=role.id)
         embed.add_field(name="Warna", value=str(role.color).upper())
 
