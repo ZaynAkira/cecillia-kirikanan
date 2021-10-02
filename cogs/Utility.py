@@ -29,12 +29,6 @@ class Utilities(commands.Cog):
             if message.guild.id == 724058448161144954:
                 pass
             await message.channel.send("hayoo, ngapain kamu nyentuh-nyentuh kemaluan?")
-            
-        elif "ingfo" in message.content.lower():
-            if message.author != self.client.user:
-            elif message.guild.id == 724058448161144954:
-                pass
-            await message.channel.send("no ingfo")
 
     #wangy generator
     @commands.command(name="wangytext", description="Membuat teks WANGY WANGY", aliases=["wangy"])
