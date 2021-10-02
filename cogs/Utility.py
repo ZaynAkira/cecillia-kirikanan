@@ -6,30 +6,6 @@ class Utilities(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-   #autoreply
-    @commands.Cog.listener()
-    async def on_message(self, message:discord.Message):
-        if "dok" in (" " + message.content.lower() + " "):
-            if message.guild.id == 724058448161144954:
-                pass
-            await message.channel.send("kopit")
-
-        elif "mangsut" in message.content.lower():
-            if message.guild.id == 724058448161144954:
-                pass
-            await message.channel.send("iyh")
-            
-        elif "assalaamualaikum" in message.content.lower():
-            await message.channel.send("Waalaikumussalaam")
-
-        elif "samlekom" in message.content.lower():
-            await message.channel.send("komsalam")
-
-        elif "sange" in (" " + message.content.lower() + " "):
-            if message.guild.id == 724058448161144954:
-                pass
-            await message.channel.send("hayoo, ngapain kamu nyentuh-nyentuh kemaluan?")
-
     #wangy generator
     @commands.command(name="wangytext", description="Membuat teks WANGY WANGY", aliases=["wangy"])
     async def wangytext(self, ctx:Context, obyek:str=None):
