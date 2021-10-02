@@ -10,12 +10,12 @@ class Utilities(commands.Cog):
     @commands.Cog.listener()
     async def on_message(self, message:discord.Message):
         if "dok" in (" " + message.content.lower() + " "):
-            if message.guild.id == IDSERVERSOBA:724058448161144954
+            if message.guild.id == IDSERVERSOBA:724058448161144954:
                 pass
             await message.channel.send("kopit")
 
         elif "mangsut" in message.content.lower():
-            if message.guild.id == IDSERVERSOBA:724058448161144954
+            if message.guild.id == IDSERVERSOBA:724058448161144954:
                 pass
             await message.channel.send("iyh")
             
@@ -26,13 +26,13 @@ class Utilities(commands.Cog):
             await message.channel.send("komsalam")
 
         elif "sange" in (" " + message.content.lower() + " "):
-            if message.guild.id == IDSERVERSOBA:724058448161144954
+            if message.guild.id == IDSERVERSOBA:724058448161144954:
                 pass
             await message.channel.send("hayoo, ngapain kamu nyentuh-nyentuh kemaluan?")
             
         elif "ingfo" in message.content.lower():
             if message.author != self.client.user:
-            elif message.guild.id == 724058448161144954
+            elif message.guild.id == 724058448161144954:
                 pass
             await message.channel.send("no ingfo")
 
