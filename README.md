@@ -6,3 +6,6 @@ Cecillia is also a project bot for discord to help you moderate server. Cecillia
 
 
 Shout out to Abin for helping me and let me "steal" his bot Resources
+
+This is a public reference repository, the real code for bot is private. In that case, you won't see my bot token here.
+Any comment or suggestion edit acceptable. Just tell me at discord: Kirikanan#4821
