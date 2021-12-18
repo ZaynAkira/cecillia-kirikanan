@@ -12,4 +12,4 @@ for namafile in os.listdir('./cogs'):
 async def on_ready():
     print(f"\n{client.user} ready.")
   
-client.run("ODY0MDQzNzIwMjk3OTM4OTQ2.YOvtbA.Aj9A1NGbr33GVvPqWPiUe2Qkioo")
+client.run("tebak")
