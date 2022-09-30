@@ -9,7 +9,6 @@ from discord.user import User
 aoa = {
     834965728658456606: 862296825478381598, #i my me
     791704671915081768: 862869693982834688, #chrono curses
-    743769711510290473: 862901369103187998, #winov's
 }
 
 EXCEPTED_CHANNEL_ID = 791713394700189706
@@ -323,5 +322,5 @@ class Log(commands.Cog):
         if int(guild.id) in aoa.keys():
             await self.client.get_channel(aoa[guild.id]).send(embed=embed)
 
-def setup(client):
-    client.add_cog(Log(client))
+async def setup(client):
+    await client.add_cog(Log(client))
