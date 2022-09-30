@@ -6,6 +6,40 @@ class Utilities(commands.Cog):
     def __init__(self, client):
         self.client = client
 
+    #autoreply
+    @commands.Cog.listener()
+    async def on_message(self, message:discord.Message):
+        """
+        if "Dok" in message.content.lower():
+            await message.channel.send("kopit")
+          
+        elif "ingfo" in message.content.lower():
+            await message.channel.send("No Ingfo")
+            """
+
+        if "mangsut" in message.content.lower():
+            await message.channel.send("iyh")
+
+        elif "sange" in message.content.lower():
+            await message.channel.send("hayoo ngapain nyentuh2 kemaluan?")
+        
+        elif "link server" in message.content.lower():
+            await message.channel.send("https://discord.gg/VhKVdmNsGq")
+        
+    #Flirt
+    @commands.command(aliases=["-chan", "darling", "my love"])
+    async def flirt(self, ctx:Context, obyek:str=None):
+        reaksi = [
+            'heeek?!',
+            'S-shut up!',
+            'I-it\'s not like Cecillia interested on Senpai! But.. maybe... Cecillia... uuhhh...',
+            'Don\'t do that again, Senpai',
+            'heee... Senpai just flirting Cecillia? Maybe Senpai should find real girlfriend than flirting a bot.',
+            'Flirting Cecillia doesn\'t make Cecillia fell in love to you, Senpai',
+            'J-just get lost!',
+        ]
+        await ctx.send(random.choice(reaksi))
+        
     #wangy generator
     @commands.command(name="wangytext", description="Membuat teks WANGY WANGY", aliases=["wangy"])
     async def wangytext(self, ctx:Context, obyek:str=None):
@@ -49,16 +83,7 @@ class Utilities(commands.Cog):
             async with ctx.typing():
                 time.sleep(2)
                 await ctx.reply(random.randint(mulai, akhir))
-    #Secret
-    @commands.command()
-    async def secret(self, ctx:Context):
-        embed = discord.Embed(
-            title = "Here's your daily mood",
-            color = ctx.guild.me.color
-        )
-        embed.add_field(name="Daily Mood today is:", value=f"[click here](https://youtu.be/a6pbjksYUHY)")
-        await ctx.send(embed=embed)
-        
+    
     #lovecalc
     @commands.command(aliases=["lc", "kalkcinta"])
     @commands.cooldown(1, 5, commands.BucketType.user)
@@ -107,5 +132,5 @@ class Utilities(commands.Cog):
                 await kirim.add_reaction(emoji)
         
 
-def setup(client):
-    client.add_cog(Utilities(client))
+async def setup(client):
+    await client.add_cog(Utilities(client))
