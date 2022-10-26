@@ -4,7 +4,7 @@ from itertools import cycle
 import asyncio
 
 
-TOKEN = #Tulis Token Anda disini
+TOKEN = "Tulis Token Anda disini"
 #===============================================================================================
 
 #setel prefix + bikin variabel client
@@ -30,7 +30,7 @@ async def on_ready():
     change_status.start()
     print('main.py, siap sedia!')
     
-    channel = client.get_channel(791704672351813634)
+    channel = client.get_channel(922100549925625886)
     await channel.send(f"{client.user} siap menerima perintah, Senpai!")
     
 #===============================================================================================
