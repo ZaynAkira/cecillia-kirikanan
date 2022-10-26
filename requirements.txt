@@ -1,4 +1,11 @@
-discord.py
+DiscordUtils
+PyNaCl
+asyncio
+dblpy
+discord
+discord-py-slash-command
+discord-together
+dominant-color-detection
 psutil
 requests
-dominant_color_detection
+wikipedia
